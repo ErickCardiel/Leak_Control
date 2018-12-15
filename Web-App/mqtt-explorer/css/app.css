@@ -1,0 +1,56 @@
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+#map{
+  width: 200%; 
+  height: 400px;
+}
+
+
+h1,h2,h3{
+	font-weight:700;
+}
+
+#mainNav{
+	padding-bottom:.5rem;		/*Ancho*/
+	font-weight:700;
+	font-family:Montserrat;
+}
+
+#mainNav .navbar-brand{
+	font-size:2em;
+	color:#FFFFFF
+}
+
+.container{
+	padding-top: 30px;
+}
+
+input{
+	width: 200px;
+}
+
+.input-text input,.input-text textarea{
+	font-size:1.5em;
+	position:relative;
+	border:1%;
+	border-radius:2;
+	box-shadow:none!important
+}
+
+.footer{
+	width: 100%;
+	background-color:#000000;
+	position:absolute; 
+	bottom:0; 
+	color:#fff
+}
+
+.btn{width: 100px}
+
+.bg-black{background-color:#000000!important}
+
+.text-white{color:#FFFFFF!important}

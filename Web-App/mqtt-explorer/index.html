@@ -1,0 +1,122 @@
+<!--
+ * Copyright 2015-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License").
+ * You may not use this file except in compliance with the License.
+ * A copy of the License is located at
+ *
+ *  http://aws.amazon.com/apache2.0
+ *
+ * or in the "license" file accompanying this file. This file is distributed
+ * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+-->
+<html>
+<head>
+   <meta charset="UTF-8"> 
+   <link rel="stylesheet" type="text/css" href="example.css">
+   <link rel="icon" type="image/png" href="img/favicon.png" />
+
+
+   <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+   <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+   <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+   <script  src="app.js"></script>
+   <script src="aws-iot-sdk-browser-bundle.js"></script>
+   <script src="bundle.js"></script>
+</head>
+<body>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content text-center">
+        <div class="modal-header text-center">
+          <h4 class="modal-title text-center">¡¡UNEXPECTED FLOW MEASUREMENTS!!</h4>
+        </div>
+          <div class="text-center">
+            <p>Do you want to close the valve?</p>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger text-center" onclick="closePipe() data-dismiss="modal"">YES</button>
+          <button type="button" class="btn btn-success text-center" data-dismiss="modal">NO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="myModalCloseValve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content text-center">
+        <div class="modal-header text-center">
+          <h4 class="modal-title text-center">¡CONFIRM ACTION!</h4>
+        </div>
+          <div class="text-center">
+            <p>Do you really want to close the valve?</p>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger text-center" onclick="closePipe()" data-dismiss="modal">YES</button>
+          <button type="button" class="btn btn-success text-center" data-dismiss="modal">NO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="myModalOpenValve" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content text-center">
+        <div class="modal-header text-center">
+          <h4 class="modal-title text-center">¡CONFIRM ACTION!</h4>
+        </div>
+          <div class="text-center">
+            <p>Do you really want to open the valve?</p>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger text-center" data-dismiss="modal" onclick="openPipe()" >YES</button>
+          <button type="button" class="btn btn-success text-center" data-dismiss="modal">NO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="chartContainer" style="height: 370px; width:100%;"></div>
+   <div class="spacer" id="spacer"></div>
+   <div class="block" id="connecting-div"></div>
+   <div class="block" id="explorer-div" style="visibility:hidden">
+ 
+<button id="openPipeBtn" type="button" class="btn btn-success" onclick="confirmChange(1)">Open the valve</button>
+<button id="closePipeBtn" type="button" class="btn btn-danger" onclick="confirmChange(0)">Close the valve</button>
+<br><hr></hr>
+<div class="subscribe" id="subscribe-div">
+
+</div></div>
+
+  <script src="plugins/jquery/jquery-3.3.1.min.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

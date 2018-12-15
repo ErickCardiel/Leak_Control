@@ -36,8 +36,9 @@ Prerequisites for **AVR** (ATmega328p programming):
 
 Prerequisites for AWS:
 - AWS Account
-- Create a **Thing** in your AWS-IOT Core and download certificates and private key.
-> ^ In order to do it follow [this](http://recetastecnologicas.blogspot.com/2018/02/aws-iot-con-esp8266.html) tutorial.
-- AWS Javascript SDK
+-- Create a **Thing** in AWS-IOT Core
+-- Create and download their certificates and private/public key
+> you can follow [this](http://recetastecnologicas.blogspot.com/2018/02/aws-iot-con-esp8266.html) tutorial.
+- [AWS IOT-Device SDK JS](https://github.com/aws/aws-iot-device-sdk-js)
 
 > **Note:** In order to work replace the folder **mqtt-explorer** in the AWS SDK-JS location:  *"/connect_device_package/aws-iot-device-sdk-js/examples/browser "*. Don't forget to update your **credential and private key**, and the **shadow thing endpoint** in the **config/bundle** javascript files.
