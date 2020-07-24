@@ -3,15 +3,15 @@ Leak Control is a product capable of detecting and controlling irregular flows i
 
 ## How does it work?
 To measure the amount of water that passes through a pipe, i use a [water flow meter sensor](https://www.adafruit.com/product/828).
-![enter image description here](https://lh3.googleusercontent.com/9YjHNqFvH08kZuoy-FPSBUxXaVIzwYxqxJh__lfaTq6uQQIbJzhTq1U88D3jwk5oAj-_S8dKmMIF "Water flow meter")
+![enter image description here](https://i.imgur.com/hrIB6Oy.png "Water flow meter")
 
 
 Readings of the water flow sensor are processesed by an ATmega328p Microcontroller (Board Pro Mini)
-![328p](https://lh3.googleusercontent.com/Guplpv8lNMYcSwSc6oISN37Szvt3Zd1bQZiw4olbeiid_QgIofNvD_z36eD8acljUN9GhpwwzOAL "328p")
+![328p](https://i.imgur.com/3EQUjQw.png "328p")
 
 
 Once the readings are obtained, the ATmega328p Microcontroller will send them by serial to the WiFi Module ESP8266 (D1 mini), then, it will process and send them to the AWS endpoint.
-![enter image description here](https://lh3.googleusercontent.com/HElydRhWFKxgBgo1LuWzFbtx6YxkAQS4EMuAEXv8WDuPgXRX8UURQDqM6D3Wigyxl8TRC1O3MOgs "ESP8266")
+![enter image description here](https://i.imgur.com/e5oajvo.png "ESP8266")
 
 
 The user will be able to access a Web application, where he will be able to see the water consumption in real time.
@@ -19,7 +19,7 @@ The user will be able to access a Web application, where he will be able to see 
 In case an irregular flow is detected, it will alert the user.
 
 The user has the possibility of controll a [solenoid valve](https://www.amazon.ca/Male-Magnetically-Latching-Solenoid-Valve/dp/B0113362S6) to open/close the flow of water in the valve, from the web app.
-![enter image description here](https://lh3.googleusercontent.com/VCly7Er0nuoJ9xkdcKwwGZA9S30Ly2V9FCBkXt_WhsCVIsqKsRNbhn2KlqFUzzPT-zRXZcHCWpw_ "Diagram")
+![enter image description here](https://i.imgur.com/BZRodrt.png "Diagram")
 
 
 ## Prerequisites
