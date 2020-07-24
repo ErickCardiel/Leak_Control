@@ -11,6 +11,7 @@ Readings of the water flow sensor are processesed by an ATmega328p Microcontroll
 
 
 Once the readings are obtained, the ATmega328p Microcontroller will send them by serial to the WiFi Module ESP8266 (D1 mini), then, it will process and send them to the AWS endpoint.
+
 ![enter image description here](https://i.imgur.com/e5oajvo.png "ESP8266")
 
 
